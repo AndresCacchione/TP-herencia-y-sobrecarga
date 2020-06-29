@@ -48,8 +48,8 @@ bool Fecha::operator > (Fecha fechaComp)
     if(this->_anio>fechaComp._anio) return true;
     if(this->_anio<fechaComp._anio) return false;
 
-    if(this->mes>fechaComp._mes) return true;
-    if(this->mes<fechaComp._mes) return false;
+    if(this->_mes>fechaComp._mes) return true;
+    if(this->_mes<fechaComp._mes) return false;
 
     if(this->_dia>fechaComp._dia) return true;
 return false;
