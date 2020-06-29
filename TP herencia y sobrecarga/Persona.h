@@ -18,6 +18,8 @@ public:
     Fecha(int, int, int);
     bool operator ==(Fecha);
     bool operator > (Fecha);
+    void operator += (int);
+    bool bisiesto();
 protected:
     int _dia, _mes, _anio;
 };
