@@ -55,6 +55,46 @@ bool Fecha::operator > (Fecha fechaComp)
 return false;
 }
 
+bool Fecha::bisiesto()
+{
+    if ((_anio%4==0 && _anio%100 !=0) || _anio%400==0 )return true;
+    return false;
+}
+
+void Fecha::operator += (int entero)
+{
+    this->_dia+=entero;
+    int vec [12]= {31,0,31,30,31,30,31,31,30,31,30,31};
+
+    if (_mes ==2 && this->bisiesto())
+    {
+        if(_dia>28 + bisiesto())
+        {
+            _dia-=28 +bisiesto();
+            _mes++;
+        }
+    }
+    else
+    {
+        for (int i=0; i<12; i++)
+        {
+            if (_dia >vec [i])
+            {
+                _dia-=vec[i];
+                _mes++;
+                break;
+            }
+        }
+
+    }
+
+    if (_mes > 12)
+    {
+        _mes-=12;
+        _anio++;
+    }
+}
+
 Persona::~Persona()
 {
     delete _nombre;
