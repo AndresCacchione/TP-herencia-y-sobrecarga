@@ -20,6 +20,7 @@ public:
     bool operator > (Fecha);
     void operator += (int);
     bool bisiesto();
+    bool operator ==(const char*);
 protected:
     int _dia, _mes, _anio;
 };

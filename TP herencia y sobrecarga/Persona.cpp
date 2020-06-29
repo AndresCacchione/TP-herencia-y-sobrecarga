@@ -95,6 +95,21 @@ void Fecha::operator += (int entero)
     }
 }
 
+bool Fecha::operator==(const char *mes)
+{
+    char matriz[12,30]= {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+    "Octubre", "Noviembre", "Diciembre"};
+
+    for(int i=0; i<12;i++)
+    {
+        if(this->_mes==i+1)
+        {
+            if(strcmp(mes,matriz[i+1])==0) return true;
+        }
+    }
+return false;
+}
+
 Persona::~Persona()
 {
     delete _nombre;
