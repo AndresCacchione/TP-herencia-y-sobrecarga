@@ -16,7 +16,7 @@ class Fecha
 {
 public:
     Fecha(int, int, int);
-private:
+protected:
     int _dia, _mes, _anio;
 };
 

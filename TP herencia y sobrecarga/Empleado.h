@@ -1,11 +1,12 @@
 #ifndef EMPLEADO_H
 #define EMPLEADO_H
-#include "../Persona.h"
+#include "Persona.h"
 
 class Empleado:public Persona
 {
     public:
-        Empleado(int, float, Fecha());
+        Empleado(int, float, Fecha);
+        ~Empleado();
 
     private:
         int _categoria;

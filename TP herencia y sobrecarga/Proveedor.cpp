@@ -1,4 +1,4 @@
-#include "../include/Proveedor.h"
+#include "Proveedor.h"
 
 
 Proveedor::Proveedor(double cuil=0 , int producto=0, char condicionPago='N'):Persona()
@@ -8,3 +8,7 @@ Proveedor::Proveedor(double cuil=0 , int producto=0, char condicionPago='N'):Per
     _condicionPago=condionPago;
 }
 
+Proveedor~Proveedor()
+{
+    Persona::~Persona();
+}

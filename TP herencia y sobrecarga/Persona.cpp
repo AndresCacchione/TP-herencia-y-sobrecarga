@@ -14,7 +14,7 @@ Direccion::Direccion(char *calle="NN", unsigned int numero= 0, char *localidad="
     strcpy(_localidad,localidad);
 }
 
-Persona::Persona(char* nombre="NN", char* apellido="NN",Direccion domicilio=Direccion dom(), unsigned long int dni=0,Fecha fecha=Fecha f(), unsigned long int telefono=0)
+Persona::Persona(char* nombre="NN", char* apellido="NN",Direccion domicilio=Direccion dom(), unsigned long int dni=0,Fecha fecha, unsigned long int telefono=0)
 {
       int tam=strlen(nombre);
       _nombre= new char[tam+1];
