@@ -16,6 +16,8 @@ class Fecha
 {
 public:
     Fecha(int, int, int);
+    bool operator ==(Fecha);
+    bool operator > (Fecha);
 protected:
     int _dia, _mes, _anio;
 };
